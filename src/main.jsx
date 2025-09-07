@@ -1,3 +1,4 @@
+import React from 'react'              
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter } from "react-router-dom";//importo il router di react
@@ -8,5 +9,5 @@ createRoot(document.getElementById('root')).render(
     <BrowserRouter>
     <App />
     </BrowserRouter>
-    </React.StrictMode>,
+  </React.StrictMode>,
 )
