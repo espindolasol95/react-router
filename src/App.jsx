@@ -3,17 +3,25 @@ import Navbar from './components/Navbar'
 import Home from './components/Home'
 import About from './components/About'
 import Products from './components/Products'
+import Layout from './components/Layout'
 
 
 
 function App() {
     return(
-        <Routes>
-         <Route path="/" element={<Home />} />
-         <Route path="/about" element={<About />} />
-         <Route path="/products" element={<Products />} />
+        <div>
+         <Navbar />
+        <div className="container mt-4">
+        
+         <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/products" element={<Products />} />
 
-        </Routes>
+         </Routes>
+         </div>
+        </div>
+    
     )
   
 }
