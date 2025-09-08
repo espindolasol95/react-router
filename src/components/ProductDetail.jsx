@@ -1,10 +1,12 @@
 import React,{useEffect, useState} from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams,useNavigate } from 'react-router-dom';
 
 
 const ProductDetail = () => {
     const{id}=useParams();
+    const navigate = useNavigate();
     const [product, setProduct] = useState(null);
+    
 
     useEffect(()=>{
      fetch(`https://fakestoreapi.com/products/${id}`)
@@ -16,10 +18,27 @@ const ProductDetail = () => {
 
 
   return (
+    <>
     <div>
       <h2>{product.title}</h2>
       <p>{product.description}</p>
     </div>
+
+    <div className=''>
+        <button className='btn btn-outline-dark'>
+         onClick={() => navigate(`/products/${productId - 1}`)}
+         
+         Precendente 
+        </button>
+        <button className='btn btn-outline-dark'>
+         onClick={() => navigate(`/products/${productId + 1}`)}
+         
+         Successivo
+        </button>
+
+    </div>
+
+    </>
   );
 }
 

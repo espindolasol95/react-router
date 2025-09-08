@@ -18,8 +18,6 @@ function App() {
           <Route path="/products/:id" element={<ProductDetail />} />
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          
-
          </Routes>
          </div>
         </div>

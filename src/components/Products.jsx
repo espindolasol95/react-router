@@ -33,10 +33,10 @@ function Products(){
         <div className="row">
           {products.map(product =>(
           <div className="col-md-3 mb-4" key={product.id}>
-            <div className="card h-100">
+            <div className="card h-100 card border-black">
               <img src={product.image} className="card-img-top p-3" alt={product.title} style={{height: '200px', objectFit: 'contain'}}/>
 
-              <div className="card-body d-flex flex-column">
+              <div className="card-body d-flex flex-column ">
                 <h5 className="card-title">{product.title}</h5>
                 <p className="card-text mt-auto">${product.price}</p>
                 <Link to={`/products/${product.id}`} className="btn btn-warning mt-2">Dettagli</Link>
