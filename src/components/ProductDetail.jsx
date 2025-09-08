@@ -17,6 +17,8 @@ const ProductDetail = () => {
     if (!product) return <p>Caricamento...</p>
 
 
+    const productId = parseInt(id);
+
   return (
     <>
     <div>
@@ -24,15 +26,15 @@ const ProductDetail = () => {
       <p>{product.description}</p>
     </div>
 
-    <div className=''>
-        <button className='btn btn-outline-dark'>
+    <div className='d-flex  gap-3'>
+        <button className='btn btn-outline-dark'
          onClick={() => navigate(`/products/${productId - 1}`)}
-         
+         >
          Precendente 
         </button>
-        <button className='btn btn-outline-dark'>
+        <button className='btn btn-outline-dark'
          onClick={() => navigate(`/products/${productId + 1}`)}
-         
+         >
          Successivo
         </button>
 
