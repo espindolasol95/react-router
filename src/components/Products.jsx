@@ -1,6 +1,7 @@
 import React from 'react'
 import{useState, useEffect}from 'react'
 import axios from 'axios'
+import {Link} from 'react-router-dom' 
 function Products(){
   const [products, setProducts]= useState([]) 
   const [loading, setLoading] = useState(true)
@@ -37,6 +38,10 @@ function Products(){
               <div className="card-body d-flex flex-column">
                 <h5 className="card-title">{product.title}</h5>
                 <p className="card-text mt-auto">${product.price}</p>
+                <Link to={`/products/${product.id}`} className="btn btn-primary mt-2">
+                 Dettagli
+                </Link>
+
               </div>
             </div>
           </div>
