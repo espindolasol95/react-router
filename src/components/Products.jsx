@@ -29,19 +29,17 @@ function Products(){
   //render della pag con i prodotti
   return (
     <div className="container mt-4">
-        <h1  className="mb-4"> I nostri proddotti</h1>
+        <h1  className="mb-4 text-center"> I nostri proddotti</h1>
         <div className="row">
           {products.map(product =>(
           <div className="col-md-3 mb-4" key={product.id}>
             <div className="card h-100">
               <img src={product.image} className="card-img-top p-3" alt={product.title} style={{height: '200px', objectFit: 'contain'}}/>
+
               <div className="card-body d-flex flex-column">
                 <h5 className="card-title">{product.title}</h5>
                 <p className="card-text mt-auto">${product.price}</p>
-                <Link to={`/products/${product.id}`} className="btn btn-primary mt-2">
-                 Dettagli
-                </Link>
-
+                <Link to={`/products/${product.id}`} className="btn btn-warning mt-2">Dettagli</Link>
               </div>
             </div>
           </div>
